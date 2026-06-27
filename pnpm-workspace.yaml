@@ -1,0 +1,9 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+minimumReleaseAgeExclude:
+  - pyright@1.1.411
+
+onlyBuiltDependencies:
+  - esbuild

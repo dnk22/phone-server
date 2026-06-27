@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+.turbo
+.venv
+pnpm-lock.yaml
+uv.lock
+contracts/generated
+packages/api-client/src/generated

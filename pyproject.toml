@@ -1,0 +1,49 @@
+[project]
+name = "android-linux-server-workspace"
+version = "0.1.0"
+requires-python = ">=3.12,<3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "pyright>=1.1.411,<2",
+  "pytest>=8.4,<10",
+  "ruff>=0.12,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = [
+  "apps/control-api",
+  "apps/device-agent",
+  "python-packages/common",
+  "python-packages/contracts",
+  "python-packages/observability",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  ".venv",
+  "contracts/generated",
+  "packages/api-client/src/generated",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "SIM", "PTH", "UP"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+include = ["apps", "python-packages", "tooling/scripts"]
+exclude = ["**/__pycache__", "contracts/generated"]
+venvPath = "."
+venv = ".venv"
+reportMissingTypeStubs = false
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --import-mode=importlib"
+testpaths = ["apps", "python-packages", "tests"]
