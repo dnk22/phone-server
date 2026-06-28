@@ -2,8 +2,12 @@ packages:
   - 'apps/*'
   - 'packages/*'
 
+allowBuilds:
+  msw: true
+
 minimumReleaseAgeExclude:
   - pyright@1.1.411
 
 onlyBuiltDependencies:
   - esbuild
+  - msw

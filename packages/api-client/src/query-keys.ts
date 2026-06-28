@@ -1,0 +1,17 @@
+export const queryKeys = {
+  session: ['session'] as const,
+  navigation: ['navigation'] as const,
+  featureAccess: ['featureAccess'] as const,
+  users: ['users'] as const,
+  roles: ['roles'] as const,
+  permissions: ['permissions'] as const,
+  features: ['features'] as const,
+  plans: ['plans'] as const,
+  subscriptions: ['subscriptions'] as const,
+  entitlements: ['entitlements'] as const,
+  menus: ['menus'] as const,
+  deviceAgents: ['deviceAgents'] as const,
+  devices: ['devices'] as const,
+  automationTasks: ['automationTasks'] as const,
+  mediaHistory: ['mediaHistory'] as const,
+};

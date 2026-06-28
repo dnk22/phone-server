@@ -1,8 +1,10 @@
+import { AppProviders } from './app/providers/AppProviders';
+import { RouterProvider } from './app/providers/RouterProvider';
+
 export function App() {
   return (
-    <main>
-      <h1>Android Linux Server Dashboard</h1>
-      <p>Phase 1 foundation is ready.</p>
-    </main>
+    <AppProviders>
+      <RouterProvider />
+    </AppProviders>
   );
 }
